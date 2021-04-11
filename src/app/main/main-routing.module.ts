@@ -2,10 +2,17 @@ import { MovieModule } from './movie/movie.module';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MainLayoutComponent } from './main-layout/main-layout.component';
 
 const routes: Routes = [
-  { path: 'movie', loadChildren: () => MovieModule },
-  { path: '', loadChildren: () => HomeModule },
+  {
+    path: '',
+    component: MainLayoutComponent,
+    children: [
+      { path: 'movie/:movieId', loadChildren: () => MovieModule },
+      { path: '', loadChildren: () => HomeModule },
+    ],
+  },
 ];
 
 @NgModule({

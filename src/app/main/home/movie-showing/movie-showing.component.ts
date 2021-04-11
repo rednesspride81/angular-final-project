@@ -20,7 +20,6 @@ export class MovieShowingComponent implements OnInit {
       // Tự động nhảy vào next khi call API thành công
       next: (result) => {
         this.movieList = result;
-        console.log(this.movieList);
       },
       // tự động nhảy vào error khi call API thất bại
       error: (error) => {

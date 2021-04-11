@@ -1,0 +1,118 @@
+<!-- <div class="containter">
+  <h1 class="text-center">Signin Form</h1>
+  <div class="row">
+    <div class="col-sm-6 mx-auto"> -->
+<!-- NgForm cung cấp các phương thức quản lý form
+                 Giờ đây ta có thể sử dụng signin form.value để lấy 
+                ra tất cả giá trị của các input bên trong tag form,
+            Nhưng ô input phải thỏa mãn 2 điều kiện là phải có propertive name và ng Model đứng 1 mình -->
+<!-- <form #signinForm="ngForm" (ngSubmit)="handleSignin()">
+        <pre>{{ signinForm.value | json }}</pre>
+        <pre>{{ signinForm.valid | json }}</pre>
+        <div class="form-group">
+          <label for="taiKhoan">Tài Khoản</label> -->
+<!-- NgModel đứng 1 mình dùng để theo dõi giá trị ô input, còn #taikhoan="ngModel" lấy ra trạng thái của ô input -->
+<!-- <input
+            type="text"
+            name="taiKhoan"
+            ngModel
+            class="form-control"
+            required
+            minlength="3"
+            maxlength="20"
+            #taiKhoan="ngModel"
+          />
+          <div
+            *ngIf="taiKhoan.invalid && (taiKhoan.touched || taiKhoan.dirty)"
+            class="alert alert-danger"
+          >
+            <span *ngIf="taiKhoan.errors?.required"
+              >Tài khoản không được để trống</span
+            >
+            <span
+              *ngIf="taiKhoan.errors?.minlenngth || taiKhoan.errors?.maxlength"
+              >Tài khoản phải từ 3 đến 20 ký tự</span
+            >
+            Tài khoản không được để trống
+          </div>
+          <pre>{{ taiKhoan.errors | json }}</pre>
+        </div>
+        <div class="form-group">
+          <label for="taiKhoan">Mật khẩu</label>
+          <input
+            type="password"
+            name="matKhau"
+            ngModel
+            class="form-control"
+            #matKhau="ngModel"
+            required
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          />
+          <div
+            *ngIf="matKhau.invalid && (matKhau.touched || matKhau.dirty)"
+            class="alert alert-danger"
+          >
+            <span *ngIf="matKhau.errors?.required">
+              Mật khẩu không được để trống</span
+            >
+            <span *ngIf="matKhau.errors?.pattern">
+              Mật khẩu không đúng định dạng
+            </span>
+          </div>
+        </div>
+        <pre>{{ error }}</pre>
+        <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+        <button class="btn btn-success" [disabled]="isLoading">
+          Đăng nhập
+        </button>
+      </form>
+    </div>
+  </div>
+</div> -->
+
+<div class="login">
+  <div class="login__wrap">
+    <form>
+      <span class="login__title">Login</span>
+      <div class="login__input">
+        <input
+          type="text"
+          id="taiKhoan"
+          name="taiKhoan"
+          onChange="{handleChange}"
+          placeholder="Tài khoản"
+        />
+        <div class="focus-input">
+          <label htmlFor="taiKhoan" class="input-icon"
+            ><i class="fa fa-user-alt"></i
+          ></label>
+        </div>
+      </div>
+      <div class="login__input">
+        <input
+          type="password"
+          id="matKhau"
+          name="matKhau"
+          onChange="{handleChange}"
+          placeholder="Mật khẩu"
+        />
+        <div class="focus-input">
+          <label htmlFor="matKhau" class="input-icon"
+            ><i class="fa fa-lock"></i
+          ></label>
+        </div>
+      </div>
+      <div class="login__fogot-password">
+        <a href="#">Quên mật khẩu?</a>
+      </div>
+      <div class="login__btn">
+        <div class="login__btn-color"></div>
+        <button type="submit">Login</button>
+      </div>
+      <div class="login__signup">
+        <span>Or Sign Up Using</span>
+        <a routerLink="/signup">SIGN UP</a>
+      </div>
+    </form>
+  </div>
+</div>
