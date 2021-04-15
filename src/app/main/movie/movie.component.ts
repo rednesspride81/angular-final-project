@@ -16,12 +16,9 @@ export class MovieComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe({
       next: (params) => {
-        console.log(params);
         // Lấy được mã phim, dùng mã phim gọi API
         this.movieService.getShowTimesMovie(params.movieId).subscribe({
-          next: (result) => {
-            console.log(result);
-          },
+          next: (result) => {},
           error: (error) => {
             console.log(error);
           },

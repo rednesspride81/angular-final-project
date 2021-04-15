@@ -1,0 +1,82 @@
+@import "../../../../assets/css/variable.scss";
+@import "../../../../assets/css/mixin.scss";
+.movie-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    @include styleText($color-white-1, $fs-1, $fw-normal);
+    .movie-info__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        .movie-info__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .movie-info__img {
+                position: relative;
+                .trailer-btn {
+                    color: $color-white;
+                    cursor: pointer;
+                    font-size: $fs-2;
+                    background-color: rgba($color: $color-gray-2, $alpha: 0.3);
+                    text-align: center;
+                    // Canh giữa hình
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    // Tạo hình tròn
+                    width: 80px;
+                    height: 80px;
+                    border: 2px solid $color-white;
+                    border-radius: 50%;
+                    line-height: 75px;
+                    // Ẩn
+                    opacity: 0;
+                    transition: all 0.3s;
+                }
+                &:hover {
+                    .trailer-btn {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .movie-info__detail {
+                padding: 0 15px;
+                max-width: 350px;
+                p {
+                    margin: 0;
+                }
+                .movie-info__ageType {
+                    display: inline-block;
+                    background-color: $age-type-color;
+                    min-width: 33px;
+                    border-radius: 10px;
+                    text-align: center;
+                    vertical-align: center;
+                    margin-right: 8px;
+                    @include styleText($color-white-1, 22px, $fw-bold);
+                }
+                .movie--info__name {
+                    @include styleText($color-white-1, $fs-3, $fw-normal);
+                }
+                .movie--info__mainDetail {
+                    @include styleText($color-white-1, $body-bg-color, $fw-normal);
+                }
+            }
+        }
+        .movie-info__review {
+            .circle {
+                height: 100px;
+                width: 100px;
+                display: block;
+                border-radius: 50%;
+                background-color: $color-white;
+            }
+        }
+    }
+}

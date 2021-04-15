@@ -3,12 +3,6 @@ import { NgForm } from '@angular/forms';
 import { AuthService } from '@/core/services/auth.service';
 import { Router } from '@angular/router';
 
-import {
-  faThumbsUp,
-  faThumbtack,
-  faHashtag,
-} from '@fortawesome/free-solid-svg-icons';
-
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
@@ -18,11 +12,6 @@ export class SigninComponent implements OnInit {
   @ViewChild('signinForm') signinForm!: NgForm;
   error: string = '';
   isLoading: boolean = false;
-
-  // Font awesome icon
-  faThumbsUp = faThumbsUp;
-  faThumbtack = faThumbtack;
-  faHashtag = faHashtag;
 
   constructor(private authService: AuthService, private router: Router) {}
 

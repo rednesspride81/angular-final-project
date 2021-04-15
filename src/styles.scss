@@ -22,3 +22,12 @@ body {
     @include styleText($body-color, $body-fs, $fw-normal);
     background-color: $body-bg-color;
 }
+
+html,
+body {
+    height: 100%;
+}
+
+a:hover {
+    text-decoration: none;
+}

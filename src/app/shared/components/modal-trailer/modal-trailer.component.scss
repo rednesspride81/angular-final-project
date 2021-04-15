@@ -1,0 +1,20 @@
+@import "../../../../assets/css/variable.scss";
+@import "../../../../assets/css/mixin.scss";
+.trailer-modal {
+    .modal-dialog {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: auto;
+        .modal-content {
+            border: none;
+            .close {
+                position: absolute;
+                right: -20px;
+                top: -20px;
+                z-index: 9999;
+            }
+        }
+    }
+}
