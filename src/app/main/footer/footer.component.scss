@@ -1,0 +1,59 @@
+@import "../../../assets/css/variable.scss";
+@import "../../../assets/css/mixin.scss";
+footer {
+    background-color: #0a1e5e;
+    .footer {
+        padding-top: 30px;
+        .footer__top {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            .footer__logo {
+                padding-bottom: 20px;
+            }
+            .footer__social-icons {
+                margin: 0;
+                li {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 0 15px;
+                    margin: -7.5px;
+                    transition: all 0.3s;
+                    a {
+                        display: inline-block;
+                        height: 34px;
+                        width: 34px;
+                        line-height: 34px;
+                        text-align: center;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: 50%;
+                        @include styleText($color-white-2, $fs-1, $fw-light);
+                    }
+                }
+                li.active {
+                    a {
+                        background: #31d7a9;
+                    }
+                }
+            }
+        }
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+            .footer__links {
+                margin: 0 -15px;
+                li {
+                    text-decoration: none;
+                    display: inline-block;
+                    padding: 0 15px;
+                    a {
+                        color: $color-white-2;
+                    }
+                }
+            }
+        }
+    }
+}

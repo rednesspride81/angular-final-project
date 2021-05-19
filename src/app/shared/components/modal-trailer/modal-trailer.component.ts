@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-modal-trailer',
   templateUrl: './modal-trailer.component.html',
-  styleUrls: ['./modal-trailer.component.scss']
+  styleUrls: ['./modal-trailer.component.scss'],
 })
 export class ModalTrailerComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

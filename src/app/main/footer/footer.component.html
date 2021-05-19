@@ -1,0 +1,53 @@
+<footer>
+  <div class="footer container">
+    <div class="footer__top">
+      <div class="footer__logo">
+        <img src="../../../assets/images/logo.png" alt="logo" />
+      </div>
+      <ul class="footer__social-icons">
+        <li
+          (mouseover)="handleChangeActive(0)"
+          [class]="{ active: isActive[0] }"
+        >
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li
+          (mouseover)="handleChangeActive(1)"
+          [class]="{ active: isActive[1] }"
+        >
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li
+          (mouseover)="handleChangeActive(2)"
+          [class]="{ active: isActive[2] }"
+        >
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </li>
+        <li
+          (mouseover)="handleChangeActive(3)"
+          [class]="{ active: isActive[3] }"
+        >
+          <a href="#"><i class="fab fa-google"></i></a>
+        </li>
+        <li
+          (mouseover)="handleChangeActive(4)"
+          [class]="{ active: isActive[4] }"
+        >
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        <span>Copyright © 2020.All Rights Reserved By Boleto </span>
+      </div>
+      <ul class="footer__links">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Term Of Use</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Feedback</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>

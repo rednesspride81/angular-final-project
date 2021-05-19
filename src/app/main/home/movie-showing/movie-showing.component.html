@@ -1,16 +1,36 @@
-<div class="container">
-  <div class="row">
-    <div *ngFor="let movie of movieList" class="col-sm-3">
-      <div class="card">
-        <img class="card-img-top" [src]="movie.hinhAnh" alt="" />
-        <div class="card-body">
-          <h4 class="card-title">{{ movie.tenPhim }}</h4>
-          <p class="card-text">{{ movie.moTa }}</p>
-          <button class="btn btn-info" routerLink="movie/{{ movie.maPhim }}">
-            Mua vé
-          </button>
-        </div>
-      </div>
-    </div>
+<div class="showing container">
+  <div class="showing__title">
+    <h2>Đang chiếu</h2>
+  </div>
+  <div class="showing__movie">
+    <owl-carousel-o [options]="customOptions">
+      <ng-container *ngFor="let movie of movieList">
+        <ng-template carouselSlide>
+          <div class="movie">
+            <div class="movie-img">
+              <img [src]="movie.hinhAnh" alt="" />
+              <a
+                class="trailer-btn"
+                data-toggle="modal"
+                data-target="#modal-trailer"
+                ><i class="fa fa-play"></i
+              ></a>
+            </div>
+            <div class="movie-content">
+              <h4>{{ movie.tenPhim }}</h4>
+              <div class="movie-booking">
+                <button
+                  class="btn btn-danger"
+                  routerLink="movie/{{ movie.maPhim }}"
+                >
+                  Mua vé
+                </button>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
   </div>
 </div>
+<app-modal-trailer></app-modal-trailer>

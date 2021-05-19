@@ -1,0 +1,78 @@
+@import "/src/assets/css/variable.scss";
+@import "/src/assets/css/mixin.scss";
+.showing {
+    .showing__title {
+        h2 {
+            @include styleText($color-white, 50px, $fw-bold);
+            margin-bottom: 30px;
+        }
+    }
+    .showing__movie {
+        .movie {
+            overflow: hidden;
+            border-radius: 7px 7px 5px 5px;
+            &:hover {
+                .movie-content {
+                    h4 {
+                        opacity: 0;
+                    }
+                    .movie-booking {
+                        opacity: 1;
+                    }
+                }
+                .movie-img {
+                    .trailer-btn {
+                        opacity: 1;
+                    }
+                }
+            }
+            .movie-img {
+                position: relative;
+                .trailer-btn {
+                    color: $color-white;
+                    cursor: pointer;
+                    font-size: $fs-2;
+                    background-color: rgba($color: $color-gray-2, $alpha: 0.3);
+                    text-align: center;
+                    // Canh giữa hình
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    // Tạo hình tròn
+                    width: 80px;
+                    height: 80px;
+                    border: 2px solid $color-white;
+                    border-radius: 50%;
+                    line-height: 75px;
+                    // Ẩn
+                    opacity: 0;
+                    transition: all 0.3s;
+                }
+                img {
+                    height: 400px;
+                }
+            }
+            .movie-content {
+                position: relative;
+                background-color: $header-bg-color;
+                padding: 23px 20px;
+                h4 {
+                    margin: 0;
+                }
+                .movie-booking {
+                    position: absolute;
+                    width: 80%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    transition: all 0.3s;
+                    opacity: 0;
+                    button {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

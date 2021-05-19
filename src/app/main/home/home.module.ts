@@ -8,12 +8,20 @@ import { MovieShowingComponent } from './movie-showing/movie-showing.component';
 import { CinemaListComponent } from './cinema-list/cinema-list.component';
 import { NewsComponent } from './news/news.component';
 
+// use modal trailer
+import { ComponentsModule } from './../../shared/components/components.module';
+
+// owl carousel
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
-  declarations: [HomeComponent, CarouselComponent, MovieShowingComponent, CinemaListComponent, NewsComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ]
+  declarations: [
+    HomeComponent,
+    CarouselComponent,
+    MovieShowingComponent,
+    CinemaListComponent,
+    NewsComponent,
+  ],
+  imports: [CommonModule, HomeRoutingModule, CarouselModule, ComponentsModule],
 })
-export class HomeModule { }
+export class HomeModule {}

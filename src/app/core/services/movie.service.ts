@@ -16,7 +16,7 @@ export class MovieService {
     const url: string =
       'https://movie0706.cybersoft.edu.vn/api/QuanLyPhim/LayDanhSachPhim';
     const params = {
-      maNhom: 'GP15',
+      maNhom: 'GP11',
     };
     // return this.http.get<any[]>(this.url);
     return this.http.get<MovieResult[]>(url, { params });

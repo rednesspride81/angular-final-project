@@ -1,0 +1,39 @@
+<div class="banner">
+  <div class="container">
+    <div class="details-banner">
+      <h3 class="movie-name">Venus</h3>
+      <span class="movie-detail">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, cum?
+      </span>
+    </div>
+  </div>
+</div>
+<div class="seat-area">
+  <h4 class="screen">screen</h4>
+  <div class="screen-thumb">
+    <img src="../../../assets/images/screen-thumb.png" alt="scren-thumb" />
+  </div>
+  <div class="subtitle">silver plus</div>
+  <div class="seats container">
+    <div class="row">
+      <div *ngFor="let seat of test.danhSachGhe" class="seat">
+        <img src="../../../assets/images/seat01.png" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="proceed-book container">
+  <div class="proceed-to-book">
+    <div class="book-item">
+      <span>You Have Choosed Seat</span>
+      <h3 class="title">d9, d10</h3>
+    </div>
+    <div class="book-item">
+      <span>Total Price</span>
+      <h3 class="title">150%</h3>
+    </div>
+    <div class="book-item">
+      <button class="btn">Proceed</button>
+    </div>
+  </div>
+</div>

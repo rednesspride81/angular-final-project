@@ -1,0 +1,48 @@
+.carousel {
+    width: 100%;
+    text-align: center;
+    margin-top: 85px;
+    margin-bottom: 50px;
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .carousel-inner {
+        &:hover {
+            .img--play {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+
+    .position--carousel {
+        position: relative;
+    }
+    .img--big {
+        width: 100%;
+        height: 700px;
+    }
+    .img--play {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &:hover {
+            display: block;
+            opacity: 0.1;
+        }
+    }
+    .carousel-indicators li {
+        background-color: orange;
+        width: 12px;
+        height: 12px;
+        padding: 0;
+        border-radius: 50%;
+        border: none;
+        color: transparent;
+        margin-bottom: 6%;
+    }
+}
